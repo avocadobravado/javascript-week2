@@ -10,6 +10,13 @@ import { AnimalComponent } from './animal-inventory.component'
         <nav-layout></nav-layout>
         <!--END NAV SECTION-->
         <img src="/resources/img/welcome.png" class="logo">
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-8 col-sm-push-2">
+        <h1>Hello Explorers! We are excited for your next visit to Rose City Zoo! Learn all about our animals before your visit.</h1>
+        </div>
+        </div>
+        </div>
          <div class="container">
         <!--ANIMAL LIST-->
           <animal-list [parentEmployeePermission]="employeePermission" [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)">
@@ -46,7 +53,7 @@ import { AnimalComponent } from './animal-inventory.component'
 
   masterAnimalList: Animal[] = [
     // First animal
-    new Animal('Hippo', 'Fiona', 0, 'Hay, Herivore Pellets, and Lettuce', 'Location', 6, 'Female', 'Baths, Cuddles, Naps', 'Loud sounds', 'Fiona loves to swim! An adult hippo can hold its breath underwater for up to 30 minutes.', true),
+    new Animal('Hippo', 'Fiona', 0, 'Hay, Herivore Pellets, and Lettuce', 'Castle', 6, 'Female', 'Baths, Cuddles, Naps', 'Loud sounds', 'Fiona loves to swim! An adult hippo can hold its breath underwater for up to 30 minutes.', true),
 
     // Second animal
     new Animal('Arctic Fox', 'Nymeria', 3, 'Lemmings, mice, and feline supplement 73', 'Winterfell', 2, 'Female', 'Playing with rope toys, sniffing the ground, snow', 'Birds, snakes, and fireworks', 'The arctic fox is able to pinpoint the exact location of prey that is under the snow.', false),
