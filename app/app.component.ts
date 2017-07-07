@@ -6,7 +6,6 @@ import { AnimalComponent } from './animal-inventory.component'
  @Component({
    selector: 'app-root',
    template: `
-
         <!--NAV SECTION, go to nav-layout.component to edit-->
         <nav-layout></nav-layout>
         <!--END NAV SECTION-->
@@ -25,10 +24,7 @@ import { AnimalComponent } from './animal-inventory.component'
 
         <!--EDIT ANIMAL SECTION, will only appear if Admin Access button is clicked. Edit in edit-animal.component-->
           <edit-animal  *ngIf="this.employeePermission === true" [childSelectedAnimal]="selectedAnimal"
-          (decreaseButtonClickedSender)="decreasePints($event)"
-          (increaseButtonClickedSender)="increasePints($event)"
           (popularClickedSender)="togglePopular($event)"
-          (staffPickClickedSender)="toggleStaffPick($event)"
           (doneButtonClickedSender)="finishedEditing()">
           </edit-animal>
         <!--EDIT ANIMAL SECTION ENDS-->
@@ -94,24 +90,6 @@ import { AnimalComponent } from './animal-inventory.component'
      this.masterAnimalList.push(newAnimalFromChild);
    }
 
-   decreasePints() {
-    this.selectedAnimal.pints -= 1;
-    if (this.selectedAnimal.pints <= 20) {
-      this.selectedAnimal.priceColor = "bg-danger";
-    } else if (this.selectedAnimal.pints <= 30){
-      this.selectedAnimal.priceColor = "bg-warning";
-    }
-  }
-
-   increasePints() {
-     this.selectedAnimal.pints += 1;
-     if (this.selectedAnimal.pints >= 31) {
-       this.selectedAnimal.priceColor = "bg-success";
-     } else if (this.selectedAnimal.pints >= 21){
-       this.selectedAnimal.priceColor = "bg-warning";
-     }
-   }
-
    togglePopular(clickedAnimal: Animal) {
      if(clickedAnimal.popular === false) {
        clickedAnimal.popular = true;
@@ -119,16 +97,6 @@ import { AnimalComponent } from './animal-inventory.component'
      } else {
        clickedAnimal.popular = false;
        console.log('false popular');
-     }
-   }
-
-   toggleStaffPick(clickedAnimal: Animal) {
-     if(clickedAnimal.staffPick === false) {
-       clickedAnimal.staffPick = true;
-       console.log('true staffPick');
-     } else {
-       clickedAnimal.staffPick = false;
-       console.log('false staffPick');
      }
    }
   }

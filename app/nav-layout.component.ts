@@ -9,7 +9,7 @@ import { AnimalComponent } from './animal-inventory.component'
     <div class="container-fluid">
     <!-- Navbar brand -->
       <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"><img src="http://gloria-project.eu/wp-content/uploads/2012/06/logo-128-transp.png" alt="Rose City Zoo">
+      <a class="navbar-brand" href="index.html"><img src="resources/img/Logo.png" alt="Rose City Zoo">
       </a>
       </div>
     <!-- Right side of navbar -->

@@ -6,17 +6,18 @@ $dark: #333;
 
 .container {
   max-width: 1000px;
+  // background-color: red;
   // border: 5px solid red;
 }
 
 .container-fluid {
   width: 100%;
-  background-color: tomato;
+  // background-color: tomato;
   padding: 0 50px;
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #47E2CE;
   color: $dark;
   font-family: 'Lato', sans-serif;
   font-size: 1.3em;
@@ -84,24 +85,26 @@ input {
 // NAVBAR LAYOUT
 
 .navbar {
-  border: 5px solid red;
+  padding-top: 10px;
+  background-color: #fafafa;
   height: 125px;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
+  border-radius: 0;
   .navbar-brand {
     height: inherit;
     padding: 0;
-    border: 5px solid mistyrose;
+    // border: 5px solid mistyrose;
     img {
-      border: 5px solid thistle;
-      width: 100px;
+      // border: 5px solid thistle;
+      // width: 100px;
       height: 100px;
       vertical-align: middle;
     }
   }
   .navbar-right {
-    background-color: mistyrose;
+    background-color: #47E2CE;
     height: 100%;
     line-height: 7em;
     // float: right;
