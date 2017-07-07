@@ -53,12 +53,23 @@ import { AnimalComponent } from './animal-inventory.component'
    employeePermission : boolean = false;
 
   masterAnimalList: Animal[] = [
-    new Animal('Hippo', 'Fiona', 0, 'Hay, Herivore Pellets, and Lettuce', 'Location', 6, 'Female', 'Baths, Cuddles, Naps', 'Loud sounds', 'An adult hippo can hold its breath underwater for up to 30 minutes.', true),
-    new Animal('Species2', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs', 'funfact', false),
-    new Animal('Species3', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs', 'funfact', false),
-    new Animal('Species4', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs5', 'funfact', true),
-    new Animal('Species', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs6', 'funfact', false),
-    new Animal('Species', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs7', 'funfact', true)
+    // First animal
+    new Animal('Hippo', 'Fiona', 0, 'Hay, Herivore Pellets, and Lettuce', 'Location', 6, 'Female', 'Baths, Cuddles, Naps', 'Loud sounds', 'Fiona loves to swim! An adult hippo can hold its breath underwater for up to 30 minutes.', true),
+
+    // Second animal
+    new Animal('Arctic Fox', 'Nymeria', 3, 'Lemmings, mice, and feline supplement 73', 'Winterfell', 2, 'Female', 'Playing with rope toys, sniffing the ground, snow', 'Birds, snakes, and fireworks', 'The arctic fox is able to pinpoint the exact location of prey that is under the snow.', false),
+
+    // Third animal
+    new Animal('Bactrian Camel', 'Prince', 10, 'Hay, pellets, grass, oats', 'Dune', 6, 'Male', 'Ear scratches, running, soothing sounds', 'Cats', 'Camels make a rumbling growl that was one of the noises used to create Chewbacca\'s voice in the Star Wars movies!', true),
+
+    // Fourth animal
+    new Animal('Lion', 'Lenny', 3, 'Ground beef, knucklebones, beef femurs, feline supplement 73', 'Casterly Rock', 11, 'Male', 'Hiding, sprinting, digging holes', 'Small children', 'Being king of the jungle is tough work. A lion can sleep up to 20 hours a day, so it is only awake for about three years of its life.', true),
+
+    // Fifth animal
+    new Animal('Dik dik', 'Tarly', 4, 'Foliage, berries, shoots', 'Dune', 6, 'Male', 'Back scratches, any type of fruit, wide open spaces for running', 'Enclosed spaces, being alone', 'Dik diks are small antelope weighing only 6 to 13 fully grown. Their common name may be an imitation of their alarm cry.', false),
+
+    // Sixth animal
+    new Animal('Seal', 'Sealie', 5, 'Fish', 'White Harbor', 6, 'Female', 'Slippery rocks, swimming, fish', 'Sharing food, penguins', 'A seal\'s eyes see well in dark murky waters, however, its highly sensitive ears are most important for locating prey.', true)
  ];
 
    login() {

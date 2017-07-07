@@ -5,7 +5,7 @@ import { AnimalComponent } from './animal-inventory.component';
  @Component({
    selector: 'footer-layout',
    template: `
-        <div class="container">
+        <div class="container-fluid">
         <div class="row">
         <p>
         <div class="col col-md-12">
