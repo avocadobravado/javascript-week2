@@ -4,6 +4,11 @@ $dark: #333;
 
 // Global styles
 
+.container {
+  max-width: 1000px;
+  // border: 5px solid red;
+}
+
 body {
   background-color: $light;
   color: $dark;
@@ -60,28 +65,6 @@ input {
   }
 }
 
-.line-1 {
-  background-color: $dark;
-  width: 100%;
-  height: 7px;
-  margin: 10px auto;
-}
-
-.line-2 {
-  background-color: $dark;
-  width: 90%;
-  height: 7px;
-  margin: 10px auto;
-}
-
-.line-3 {
-  background-color: $dark;
-  width: 80%;
-  margin-bottom: 10px;
-  height: 7px;
-  margin: 10px auto 30px auto;
-}
-
 .bg-success {
   background-color: darken($light, 6%);
 }
@@ -90,6 +73,36 @@ input {
 .login {
   margin: 10px 0 0 10px;
 }
+
+// NAVBAR LAYOUT
+
+.navbar {
+  border: 5px solid red;
+  height: 100px;
+  .navbar-brand {
+    height: inherit;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    border: 5px solid mistyrose;
+    img {
+      border: 5px solid thistle;
+      // width: 50%;
+      // height: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+// navbar
+// container
+// fluid
+// navbar
+// header
+// navbar
+// brand
+// navbar
+// right
 
 // Logo/top of container area
 .logo {
