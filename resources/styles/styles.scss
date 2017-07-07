@@ -1,6 +1,7 @@
 // Colors
 $light: #f5e4c6;
 $dark: #333;
+$white: #fafafa;
 
 // Global styles
 
@@ -210,7 +211,7 @@ edit-animal {
 // Animal list
 .card {
   background-color: darken($light, 10%);
-  border: 5px solid $light;
+  border: 5px solid $white;
   padding: 0 20px;
   height: 400px;
   font-size: 1.1em;

@@ -9,13 +9,20 @@ import { AnimalComponent } from './animal-inventory.component'
         <!--NAV SECTION, go to nav-layout.component to edit-->
         <nav-layout></nav-layout>
         <!--END NAV SECTION-->
+        <img src="/resources/img/welcome.png" class="logo">
+         <div class="container">
+        <!--ANIMAL LIST-->
+          <animal-list [parentEmployeePermission]="employeePermission" [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)">
+          </animal-list>
+        <!--ANIMAL LIST ENDS-->
 
+        <!--FOOTER LAYOUT SECTION, edit in footer-layout.component-->
+        <footer-layout></footer-layout>
+        <!--FOOTER ENDS-->
         <div class="login">
           <input type="password" placeholder="Password" />
           <button type="button" (click)="login()">Employee Login</button>
         </div>
-
-       <div class="container">
         <!--NEW ANIMAL SECTION, will only appear if Admin Access button is clicked. Edit in new-animal.component -->
         <div class="employeePermission-wrapper">
           <new-animal  *ngIf="this.employeePermission === true" (newAnimalSender)="addAnimal($event)">
@@ -29,18 +36,7 @@ import { AnimalComponent } from './animal-inventory.component'
           </edit-animal>
         <!--EDIT ANIMAL SECTION ENDS-->
         </div><!--Employee permission wrapper closes-->
-
-        <!--ANIMAL LIST-->
-          <animal-list [parentEmployeePermission]="employeePermission" [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)">
-          </animal-list>
-        <!--ANIMAL LIST ENDS-->
-
-        <!--FOOTER LAYOUT SECTION, edit in footer-layout.component-->
-        <footer-layout></footer-layout>
-        <!--FOOTER ENDS-->
-
         </div><!--Container closes-->
-
      `
  })
 
