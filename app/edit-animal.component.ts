@@ -1,28 +1,28 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Beer } from './beer.model';
+import { Animal } from './animal.model';
 
 @Component({
-  selector: 'edit-beer',
+  selector: 'edit-animal',
   template: `
     <div>
-        <div *ngIf="childSelectedBeer">
-          <div id="edit-beer-wrapper">
-          <h1>Edit Beer</h1>
-          <label>Enter Beer Name:</label>
+        <div *ngIf="childSelectedAnimal">
+          <div id="edit-animal-wrapper">
+          <h1>Edit Animal</h1>
+          <label>Enter Animal Name:</label>
           <br>
-          <input [(ngModel)]="childSelectedBeer.name">
+          <input [(ngModel)]="childSelectedAnimal.name">
           <br>
-          <label>Enter Beer Brand:</label>
+          <label>Enter Animal Brand:</label>
           <br>
-          <input [(ngModel)]="childSelectedBeer.brand">
+          <input [(ngModel)]="childSelectedAnimal.brand">
           <br>
-          <label>Enter Beer Price:</label>
+          <label>Enter Animal Price:</label>
           <br>
-          <input [(ngModel)]="childSelectedBeer.price">
+          <input [(ngModel)]="childSelectedAnimal.price">
           <br>
-          <label>Enter Beer ABV (1-3):</label>
+          <label>Enter Animal ABV (1-3):</label>
           <br>
-          <input [(ngModel)]="childSelectedBeer.abv">
+          <input [(ngModel)]="childSelectedAnimal.abv">
           <br>
           <label>Edit number of pints available:</label>
           <br>
@@ -30,9 +30,9 @@ import { Beer } from './beer.model';
           <button (click)="increaseButtonClicked()" class="pints-available">+1</button>
           <br>
           <label>Customer Favorite?</label>
-          <input type="checkbox" (click)="popularClicked(childSelectedBeer)"/><br>
+          <input type="checkbox" (click)="popularClicked(childSelectedAnimal)"/><br>
           <label>Staff Favorite?</label>
-          <input type="checkbox" (click)="staffPickClicked(childSelectedBeer)"/><br>
+          <input type="checkbox" (click)="staffPickClicked(childSelectedAnimal)"/><br>
           <br>
           <button (click)="doneButtonClicked()">Done 🍻</button>
           </div>
@@ -41,8 +41,8 @@ import { Beer } from './beer.model';
   `
 })
 
-export class EditBeerComponent {
-  @Input() childSelectedBeer: Beer;
+export class EditAnimalComponent {
+  @Input() childSelectedAnimal: Animal;
   @Output() doneButtonClickedSender = new EventEmitter();
   @Output() decreaseButtonClickedSender = new EventEmitter();
   @Output() increaseButtonClickedSender = new EventEmitter();
@@ -62,10 +62,10 @@ export class EditBeerComponent {
   }
 
   popularClicked() {
-    this.popularClickedSender.emit(this.childSelectedBeer);
+    this.popularClickedSender.emit(this.childSelectedAnimal);
   }
 
   staffPickClicked() {
-    this.staffPickClickedSender.emit(this.childSelectedBeer);
+    this.staffPickClickedSender.emit(this.childSelectedAnimal);
   }
 }

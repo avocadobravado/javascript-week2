@@ -118,8 +118,8 @@ input {
   font-size: 1.5em;
 }
 
-//NEW BEER
-new-beer {
+//NEW ANIMAL
+new-animal {
   clear: both;
   input {
     margin-bottom: 5px;
@@ -132,14 +132,14 @@ new-beer {
   }
 }
 
-//EDIT BEER
+//EDIT Animal
 .employeePermission-wrapper {
   display: flex;
   justify-content: space-around;
 }
 
-edit-beer {
-  @extend new-beer;
+edit-animal {
+  @extend new-animal;
   h1 {
     margin-top: 0;
   }
@@ -149,11 +149,11 @@ edit-beer {
     height: 30px;
   }
 }
-.edit-beer-button {
+.edit-animal-button {
   margin-right: 40px;
 }
 
-// Beer list
+// Animal list
 .card {
   background-color: darken($light, 10%);
   border: 5px solid $light;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // import { DomSanitizer } from '@angular/platform-browser';
 import { Animal } from './animal.model';
-import { AnimalComponent } from './animal-database.component'
+import { AnimalComponent } from './animal-inventory.component'
 
  @Component({
    selector: 'app-root',
@@ -12,37 +12,42 @@ import { AnimalComponent } from './animal-database.component'
         </div>
        <div class="container">
         <div class="employeePermission-wrapper">
-        <!--New animal-->
-
+        <!--New beer-->
         <new-animal  *ngIf="this.employeePermission === true" (newAnimalSender)="addAnimal($event)"></new-animal>
-
-        <!--Edit animal-->
-        <edit-animal  *ngIf="this.employeePermission === true" [childselectedAnimal]="selectedAnimal"
+        <!--Edit beer-->
+        <edit-animal  *ngIf="this.employeePermission === true" [childSelectedAnimal]="selectedAnimal"
+        (decreaseButtonClickedSender)="decreasePints($event)"
+        (increaseButtonClickedSender)="increasePints($event)"
+        (popularClickedSender)="togglePopular($event)"
+        (staffPickClickedSender)="toggleStaffPick($event)"
         (doneButtonClickedSender)="finishedEditing()"></edit-animal>
         </div>
-
-        <!--Animal database-->
-        <animal-database [parentEmployeePermission]="employeePermission" [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-database>
+        <!--Beer list-->
+        <animal-list [parentEmployeePermission]="employeePermission" [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
         </div>
 
      `
  })
-// In edit-beer
- // (decreaseButtonClickedSender)="decreasePints($event)"
- // (increaseButtonClickedSender)="increasePints($event)"
- // (popularClickedSender)="togglePopular($event)"
- // (staffPickClickedSender)="toggleStaffPick($event)"
 
  export class AppComponent {
    selectedAnimal = null;
    employeePermission : boolean = false;
 
   masterAnimalList: Animal[] = [
-    new Animal('Animal', 'Name', 1, 'Diet', 'Location', 3, 'Likes', 'Dislikes'),
-    new Animal('Animal', 'Name', 1, 'Diet', 'Location', 3, 'Likes', 'Dislikes'),
-    new Animal('Animal', 'Name', 1, 'Diet', 'Location', 3, 'Likes', 'Dislikes')
+    new Animal('Berlinerweisse', "pFriem", 3, 3.5),
+    new Animal('White Dog IPA','El Segundo', 5, 6.9),
+    new Animal('Kook - IIPA','Pizza Port', 5, 7.3),
+    new Animal('Accumulated Knowledge','Modern Times', 6, 6.2),
+    new Animal('Blanche de Chambly','Unibroue', 5, 5),
+    new Animal('Luponic Distortion','Firestone Walker', 5, 5.9),
+    new Animal('Edelwiss','Schneider', 6, 6.2),
+    new Animal('Galaxy - White IPA w Brett', 'Anchorage', 4, 7),
+    new Animal('Two Flowers - Hemp & CBD IPA','Coalition', 6, 6),
+    new Animal('Urban Farmhouse','The Commons', 5, 5.3),
+    new Animal('Handtruck - Pale','Barley Brown\'s', 7, 5.5)
  ];
 
+   // clickMessage = '';
    login() {
      if (this.employeePermission === false ) {
        this.employeePermission = true;
@@ -65,45 +70,41 @@ import { AnimalComponent } from './animal-database.component'
      this.masterAnimalList.push(newAnimalFromChild);
    }
 
-  //  decreasePints() {
-  //   this.selectedAnimal.pints -= 1;
-  //   if (this.selectedAnimal.pints <= 20) {
-  //     this.selectedAnimal.priceColor = "bg-danger";
-  //   } else if (this.selectedAnimal.pints <= 30){
-  //     this.selectedAnimal.priceColor = "bg-warning";
-  //   }
-  // }
-  //
-  //  increasePints() {
-  //    this.selectedAnimal.pints += 1;
-  //    if (this.selectedAnimal.pints >= 31) {
-  //      this.selectedAnimal.priceColor = "bg-success";
-  //    } else if (this.selectedAnimal.pints >= 21){
-  //      this.selectedAnimal.priceColor = "bg-warning";
-  //    }
-  //  }
+   decreasePints() {
+    this.selectedAnimal.pints -= 1;
+    if (this.selectedAnimal.pints <= 20) {
+      this.selectedAnimal.priceColor = "bg-danger";
+    } else if (this.selectedAnimal.pints <= 30){
+      this.selectedAnimal.priceColor = "bg-warning";
+    }
+  }
 
-/////////////////
-// Pipe stuff //
-///////////////
+   increasePints() {
+     this.selectedAnimal.pints += 1;
+     if (this.selectedAnimal.pints >= 31) {
+       this.selectedAnimal.priceColor = "bg-success";
+     } else if (this.selectedAnimal.pints >= 21){
+       this.selectedAnimal.priceColor = "bg-warning";
+     }
+   }
 
-  //  togglePopular(clickedBeer: Beer) {
-  //    if(clickedBeer.popular === false) {
-  //      clickedBeer.popular = true;
-  //      console.log('true popular');
-  //    } else {
-  //      clickedBeer.popular = false;
-  //      console.log('false popular');
-  //    }
-  //  }
-  //
-  //  toggleStaffPick(clickedBeer: Beer) {
-  //    if(clickedBeer.staffPick === false) {
-  //      clickedBeer.staffPick = true;
-  //      console.log('true staffPick');
-  //    } else {
-  //      clickedBeer.staffPick = false;
-  //      console.log('false staffPick');
-  //    }
-  //  }
-  // }
+   togglePopular(clickedAnimal: Animal) {
+     if(clickedAnimal.popular === false) {
+       clickedAnimal.popular = true;
+       console.log('true popular');
+     } else {
+       clickedAnimal.popular = false;
+       console.log('false popular');
+     }
+   }
+
+   toggleStaffPick(clickedAnimal: Animal) {
+     if(clickedAnimal.staffPick === false) {
+       clickedAnimal.staffPick = true;
+       console.log('true staffPick');
+     } else {
+       clickedAnimal.staffPick = false;
+       console.log('false staffPick');
+     }
+   }
+  }
