@@ -5,6 +5,13 @@ import { AnimalComponent } from './animal-inventory.component'
  @Component({
    selector: 'nav-layout',
    template: `
+
+<!--Monkey business-->
+    <div class="monkey-wrapper">
+      <div class="monkey">
+        <img src="resources/img/monkey.png" class="monkey-img">
+      </div>
+    </div>
    <nav class="navbar">
     <div class="container-fluid">
     <!-- Navbar brand -->
@@ -12,10 +19,6 @@ import { AnimalComponent } from './animal-inventory.component'
       <a class="navbar-brand" href="index.html"><img src="resources/img/Logo.png" alt="Rose City Zoo">
       </a>
       </div>
-    <!-- Right side of navbar -->
-      <span class="nav navbar-nav navbar-right">
-      <p><em>Admin Login</em></p>
-      </span>
     </div><!--Container close -->
    </nav>
      `

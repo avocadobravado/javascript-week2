@@ -95,10 +95,7 @@ input {
   .navbar-brand {
     height: inherit;
     padding: 0;
-    // border: 5px solid mistyrose;
     img {
-      // border: 5px solid thistle;
-      // width: 100px;
       height: 100px;
       vertical-align: middle;
     }
@@ -107,22 +104,49 @@ input {
     background-color: #47E2CE;
     height: 100%;
     line-height: 7em;
-    // float: right;
-    // align-self: flex-end;
-    vertical-align: middle;
-    // padding-top: 50%;
   }
 }
 
-// navbar
-// container
-// fluid
-// navbar
-// header
-// navbar
-// brand
-// navbar
-// right
+// Monkey animation
+
+.monkey-wrapper {
+  position: relative;
+  z-index: 1;
+  .monkey {
+    position: absolute;
+    height: 200px;
+    left: 80vw;
+    bottom: -100%;
+    .monkey-img {
+      width: 200px;
+      position: absolute;
+      top: -60%;
+      animation: monkeyaround 8s 1 alternate ease-in-out;
+    }
+  }
+}
+
+@keyframes monkeyaround {
+  0% {
+    transform: rotate(0deg) translateY(300px);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(0deg) translateY(300px);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+  transform: rotate(0deg) translateY(300px);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
 
 // Logo/top of container area
 .logo {
