@@ -32,6 +32,8 @@ import { Animal } from './animal.model';
           <br>
           <input [(ngModel)]="childSelectedAnimal.dislikes">
           <br>
+          <input [(ngModel)]="childSelectedAnimal.funFact">
+          <br>
           <label>Edit number of pints available:</label>
           <br>
           <button (click)="decreaseButtonClicked()" class="pints-available">-1</button>

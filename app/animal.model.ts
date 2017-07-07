@@ -1,8 +1,4 @@
 export class Animal {
-  public pints: number = 35;
-  public priceColor: string = "bg-success";
-  public abvColor: string = "text-muted";
-  // public popular: boolean = false;
   public staffPick: boolean = false;
   constructor(
     public species: string,
@@ -14,6 +10,7 @@ export class Animal {
     public sex: string,
     public likes: string,
     public dislkes: string,
+    public funFact: string,
     public popular: boolean
   ) { }
 }

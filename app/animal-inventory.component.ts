@@ -8,13 +8,12 @@ import { Animal } from './animal.model';
   template: `
 
       <select (change)="onChange($event.target.value)" class="filter">
-        <option value="showMostPopular">Show Most Popular</option>
-        <option value="showStaffPicks">Show Staff Picks</option>
+        <option value="showMostPopular">Show Explorer Favorites</option>
         <option value="showAll" selected="selected">Show All</option>
       </select>
 
      <div class={{currentAnimal.priceColor}} *ngFor="let currentAnimal of childAnimalList | filter:filterByChoice">
-    <div class="card col-md-6">
+    <div class="card col-xs-12 col-sm-12 col-md-6">
      <div class="card-block">
        <div class="card-title">
         <!--ANIMAL SPECIES AND POPULARITY-->
@@ -23,16 +22,14 @@ import { Animal } from './animal.model';
          </p>
        </div>
          <p>{{currentAnimal.name}}</p>
-         <p><span [style.color]="abvColor(currentAnimal)">{{currentAnimal.age}}% ABV</span></p>n
+         <p><span [style.color]="abvColor(currentAnimal)">{{currentAnimal.age}} years old</span></p>
          <p>{{currentAnimal.diet}}</p>
          <p>{{currentAnimal.location}}</p>
          <p>{{currentAnimal.caretakers}}</p>
          <p>{{currentAnimal.sex}}</p>
          <p>{{currentAnimal.likes}}</p>
          <p>{{currentAnimal.dislikes}}</p>
-      <!--
-       <p *ngIf="currentAnimal.staffPick === true">Staff Pick*</p>
-       <p class="price"><span [style.color]="priceColor(currentAnimal)">\${{currentAnimal.price}}</span></p>-->
+         <p>{{currentAnimal.funFact}}</p>
        <a href="#edit-animal-wrapper"><button  *ngIf="parentEmployeePermission === true" (click)="editButtonHasBeenClicked(currentAnimal)" class="edit-animal-button">Edit!</button></a>
       </div>
       </div>

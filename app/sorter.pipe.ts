@@ -7,8 +7,6 @@ import {Animal} from './animal.model';
 })
 
 export class FilterPipe implements PipeTransform {
-
-
   transform(input: Animal[], desiredFilter) {
     var output: Animal[] = [];
     if(desiredFilter === "showMostPopular") {
@@ -22,6 +20,4 @@ export class FilterPipe implements PipeTransform {
       return input;
     }
   }
-
-
 }

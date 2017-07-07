@@ -4,15 +4,12 @@ $dark: #333;
 
 // Global styles
 
-.container {
-  margin-bottom: 200px;
-}
-
 body {
   background-color: $light;
   color: $dark;
   font-family: 'Lato', sans-serif;
   font-size: 1.3em;
+  margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -157,8 +154,25 @@ edit-animal {
 .card {
   background-color: darken($light, 10%);
   border: 5px solid $light;
-  padding: 10px;
+  padding: 0 20px;
+  height: 400px;
+  font-size: 1.1em;
+  overflow-y: scroll;
   .card-title {
     background-color: tomato;
+    padding: 10px;
+    font-size: 1.5em;
   }
+}
+
+// Footer layout
+app-root {
+
+}
+
+footer-layout {
+  display: block;
+  background-color: red;
+  clear: both;
+  margin-bottom: 0;
 }
