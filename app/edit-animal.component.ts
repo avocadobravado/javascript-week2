@@ -6,7 +6,7 @@ import { Animal } from './animal.model';
   template: `
     <div>
         <div *ngIf="childSelectedAnimal">
-          <div id="edit-animal-wrapper">
+          <div id="edit-animal-wrapper" class="admin">
           <h1>Edit Animal</h1>
           <label>Enter Animal Species:</label>
           <br>

@@ -66,7 +66,7 @@ strong {
 input {
   font-size: 0.9em;
   padding: 5px;
-  width: 300px;
+  width: 350px;
   border-radius: 5px;
   border: 1px solid $dark;
   transition: all 0.3s ease-in-out;
@@ -151,7 +151,7 @@ input {
       width: 200px;
       position: absolute;
       top: -60%;
-      animation: monkeyaround 8s 1 alternate ease-in-out;
+      animation: monkeyaround 8s 3 alternate ease-in-out;
     }
   }
 }
@@ -202,7 +202,12 @@ input {
   transform: translateX(-50%);
 }
 
+// NEW ANIMAL AND EDIT Animal
+.admin {
+
+}
 //NEW ANIMAL
+
 new-animal {
   clear: both;
   input {
@@ -227,7 +232,6 @@ new-animal {
 edit-animal {
   @extend new-animal;
   h1 {
-    margin-top: 0;
   }
   .pints-available {
     padding: 0 10px;
