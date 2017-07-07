@@ -22,8 +22,8 @@ button {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9em;
-  background-color: $dark;
-  color: $light;
+  background-color: $orange;
+  color: $white;
 }
 
 select {
@@ -66,6 +66,7 @@ strong {
 input {
   font-size: 0.9em;
   padding: 5px;
+  width: 300px;
   border-radius: 5px;
   border: 1px solid $dark;
   transition: all 0.3s ease-in-out;
@@ -92,6 +93,20 @@ input {
   margin-bottom: 30px;
   button {
     padding: 20px;
+    color: $white;
+    background: lighten($orange, 10%);
+    border-bottom:6px solid $orange;
+    outline: none;
+    transition: 0.3s all ease-in-out;
+    &:active {
+      background-color: $orange;
+      padding: 22px 20px;
+      transform: translateY(6px);
+      border-bottom: none;
+    }
+    &:hover {
+      background: lighten($orange, 20%);
+    }
   }
 }
 
@@ -198,6 +213,8 @@ new-animal {
     margin: 10px 0 20px 0;
     padding: 10px;
     font-size: 1.2em;
+    background-color: $orange;
+    color: $white;
   }
 }
 
