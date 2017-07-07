@@ -20,7 +20,7 @@ import { Animal } from './animal.model';
         <div class="card-title">
         <!--ANIMAL SPECIES AND POPULARITY-->
          <h4>{{currentAnimal.species}}
-         <span *ngIf="currentAnimal.popular === true">- Explorer Favorite!</span>
+         <span *ngIf="currentAnimal.popular === true">- Explorer Favorite! 🌟</span>
          </h4>
        </div>
        <div class="card-content">

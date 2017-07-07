@@ -8,32 +8,37 @@ import { Animal } from './animal.model';
         <div *ngIf="childSelectedAnimal">
           <div id="edit-animal-wrapper">
           <h1>Edit Animal</h1>
-          <label>Enter Animal Name:</label>
+          <label>Enter Animal Species:</label>
           <br>
           <input [(ngModel)]="childSelectedAnimal.species">
           <br>
-          <label>Enter Animal Brand:</label>
+          <label>Enter Animal Name:</label>
           <br>
           <input [(ngModel)]="childSelectedAnimal.name">
           <br>
-          <label>Enter Animal Price:</label>
+          <label>Enter Animal Diet:</label>
           <br>
           <input [(ngModel)]="childSelectedAnimal.diet">
           <br>
-          <label>Enter Animal ABV (1-3):</label>
+          <label>Enter Animal Location:</label>
           <br>
           <input [(ngModel)]="childSelectedAnimal.location">
           <br>
+          <label>Enter Animal Caretakers:</label>
           <input [(ngModel)]="childSelectedAnimal.caretakers">
           <br>
+          <label>Enter Animal Sex:</label>
           <input [(ngModel)]="childSelectedAnimal.sex">
           <br>
+          <label>Enter Animal Likes:</label>
           <input [(ngModel)]="childSelectedAnimal.likes">
           <br>
+          <label>Enter Animal Dislikes:</label>
           <input [(ngModel)]="childSelectedAnimal.dislikes">
           <br>
+          <label>Enter Animal Fun Fact:</label>
           <input [(ngModel)]="childSelectedAnimal.funFact">
-          <label>Customer Favorite?</label>
+          <label>Is the animal a visitor favorite?</label>
           <input type="checkbox" (click)="popularClicked(childSelectedAnimal)"/><br>
           <br>
           <button (click)="doneButtonClicked()">Update</button>

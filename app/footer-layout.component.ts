@@ -6,12 +6,10 @@ import { AnimalComponent } from './animal-inventory.component';
    selector: 'footer-layout',
    template: `
         <div class="container-fluid">
-        <div class="row">
-        <p>
-        <div class="col col-md-12">
-        <h1>This is the footer</h1>
-        </div>
-        </div>
+          <div class="row">
+            <div class="col col-md-12">
+            </div>
+          </div>
         </div>
      `
  })

@@ -9,7 +9,7 @@ export class Animal {
     public caretakers: number,
     public sex: string,
     public likes: string,
-    public dislkes: string,
+    public dislikes: string,
     public funFact: string,
     public popular: boolean
   ) { }
