@@ -4,35 +4,37 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'new-animal',
   template: `
-    <h1>Add a New Animal</h1>
+    <h1>Add a New Animal Species</h1>
+
     <div class="new-animal-wrapper">
-    <div>
-     <label>Enter Animal Name:</label>
-     <input #newName>
-   </div>
-   <div>
-   <label>Enter Animal Name:</label>
-     <input #newBrand>
-   </div>
-   <div>
-    <label>New price:</label>
-      <input #newPrice>
-    <div>
-    <label>Animal ABV:</label>
-      <input #newAbv>
-    </div>
-    <button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAbv.value);">Add Animal 🍺</button>
-    </div>
+      <label>Animal Species:</label>
+        <input #newSpecies>
+      <label>Animal Name:</label>
+       <input #newName>
+      <label>Animal Age:</label>
+        <input #newAge>
+      <label>Animal Diet:</label>
+        <input #newDiet>
+      <label>Animal Location:</label>
+        <input #newLocation>
+      <label>Number of Daily Caretakers:</label>
+        <input #newCaretakers>
+      <label>Animal's Sex:</label>
+        <input #newSex>
+      <label>Animal Likes:</label>
+        <input #newLikes>
+      <label>Animal Dislikes:</label>
+        <input #newDislikes>
+    <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value);">Add Animal 🦁</button>
     </div>
   `
 })
-// <input type="checkbox" [(ngModel)]="popular" [value]="true" #newPopular name="popular">Yes (optional)<br>
 
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
 
-  submitForm(name: string, brand: string, price: number, abv: number, staffPick: boolean) {
-    var newAnimalToAdd: Animal = new Animal(name, brand, price, abv);
+  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string, popular: boolean) {
+    var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes, popular);
     this.newAnimalSender.emit(newAnimalToAdd);
     console.log(newAnimalToAdd);
   }

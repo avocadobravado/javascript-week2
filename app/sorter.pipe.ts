@@ -18,13 +18,6 @@ export class FilterPipe implements PipeTransform {
         }
       }
       return output;
-    } else if (desiredFilter === "showStaffPicks") {
-      for (var i = 0; i < input.length; i++) {
-        if (input[i].staffPick === true) {
-          output.push(input[i]);
-        }
-      }
-      return output;
     } else {
       return input;
     }

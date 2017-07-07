@@ -10,19 +10,27 @@ import { Animal } from './animal.model';
           <h1>Edit Animal</h1>
           <label>Enter Animal Name:</label>
           <br>
-          <input [(ngModel)]="childSelectedAnimal.name">
+          <input [(ngModel)]="childSelectedAnimal.species">
           <br>
           <label>Enter Animal Brand:</label>
           <br>
-          <input [(ngModel)]="childSelectedAnimal.brand">
+          <input [(ngModel)]="childSelectedAnimal.name">
           <br>
           <label>Enter Animal Price:</label>
           <br>
-          <input [(ngModel)]="childSelectedAnimal.price">
+          <input [(ngModel)]="childSelectedAnimal.diet">
           <br>
           <label>Enter Animal ABV (1-3):</label>
           <br>
-          <input [(ngModel)]="childSelectedAnimal.abv">
+          <input [(ngModel)]="childSelectedAnimal.location">
+          <br>
+          <input [(ngModel)]="childSelectedAnimal.caretakers">
+          <br>
+          <input [(ngModel)]="childSelectedAnimal.sex">
+          <br>
+          <input [(ngModel)]="childSelectedAnimal.likes">
+          <br>
+          <input [(ngModel)]="childSelectedAnimal.dislikes">
           <br>
           <label>Edit number of pints available:</label>
           <br>

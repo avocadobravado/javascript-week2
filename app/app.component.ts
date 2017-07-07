@@ -34,17 +34,13 @@ import { AnimalComponent } from './animal-inventory.component'
    employeePermission : boolean = false;
 
   masterAnimalList: Animal[] = [
-    new Animal('Berlinerweisse', "pFriem", 3, 3.5),
-    new Animal('White Dog IPA','El Segundo', 5, 6.9),
-    new Animal('Kook - IIPA','Pizza Port', 5, 7.3),
-    new Animal('Accumulated Knowledge','Modern Times', 6, 6.2),
-    new Animal('Blanche de Chambly','Unibroue', 5, 5),
-    new Animal('Luponic Distortion','Firestone Walker', 5, 5.9),
-    new Animal('Edelwiss','Schneider', 6, 6.2),
-    new Animal('Galaxy - White IPA w Brett', 'Anchorage', 4, 7),
-    new Animal('Two Flowers - Hemp & CBD IPA','Coalition', 6, 6),
-    new Animal('Urban Farmhouse','The Commons', 5, 5.3),
-    new Animal('Handtruck - Pale','Barley Brown\'s', 7, 5.5)
+    new Animal('POPULARONE', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs', true),
+    new Animal('Species2', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs', false),
+    new Animal('Species3', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs', false),
+    new Animal('Species4', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs5', true),
+    new Animal('Species', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs6', false),
+    new Animal('Species', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs7', true),
+    new Animal('Species', 'Name', 3, 'Diet', 'Location', 6, 'Female', 'Pickles', 'Warthogs8', false)
  ];
 
    // clickMessage = '';

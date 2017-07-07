@@ -16,13 +16,23 @@ import { Animal } from './animal.model';
      <div class={{currentAnimal.priceColor}} *ngFor="let currentAnimal of childAnimalList | filter:filterByChoice">
     <div class="card col-md-6">
      <div class="card-block">
-       <div class="card-title"><p>{{currentAnimal.name}}</p></div>
-       <p>{{currentAnimal.brand}}</p>
-       <p><span [style.color]="abvColor(currentAnimal)">{{currentAnimal.abv}}% ABV</span></p>
-       <p>{{currentAnimal.pints}} pints available</p>
-       <p *ngIf="currentAnimal.popular === true">Popular*</p>
+       <div class="card-title">
+        <!--ANIMAL SPECIES AND POPULARITY-->
+         <p>{{currentAnimal.species}} -
+         <span *ngIf="currentAnimal.popular === true">Explorer Favorite!</span>
+         </p>
+       </div>
+         <p>{{currentAnimal.name}}</p>
+         <p><span [style.color]="abvColor(currentAnimal)">{{currentAnimal.age}}% ABV</span></p>n
+         <p>{{currentAnimal.diet}}</p>
+         <p>{{currentAnimal.location}}</p>
+         <p>{{currentAnimal.caretakers}}</p>
+         <p>{{currentAnimal.sex}}</p>
+         <p>{{currentAnimal.likes}}</p>
+         <p>{{currentAnimal.dislikes}}</p>
+      <!--
        <p *ngIf="currentAnimal.staffPick === true">Staff Pick*</p>
-       <p class="price"><span [style.color]="priceColor(currentAnimal)">\${{currentAnimal.price}}</span></p>
+       <p class="price"><span [style.color]="priceColor(currentAnimal)">\${{currentAnimal.price}}</span></p>-->
        <a href="#edit-animal-wrapper"><button  *ngIf="parentEmployeePermission === true" (click)="editButtonHasBeenClicked(currentAnimal)" class="edit-animal-button">Edit!</button></a>
       </div>
       </div>
@@ -46,9 +56,9 @@ export class AnimalComponent {
   }
 
   abvColor(animal: Animal) {
-    if (animal.abv <= 5.5) {
+    if (animal.age <= 5.5) {
     return '#888';
-  } else if (animal.abv <= 6.5) {
+  } else if (animal.age <= 6.5) {
     return '#555';
     } else {
     return '#000';
@@ -56,9 +66,9 @@ export class AnimalComponent {
   }
 
   priceColor(animal: Animal) {
-    if (animal.price <= 4.5) {
+    if (animal.caretakers <= 4.5) {
     return '#888';
-  } else if (animal.price <= 5.5) {
+  } else if (animal.caretakers <= 5.5) {
     return '#555';
     } else {
     return '#000';
