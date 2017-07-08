@@ -16,10 +16,6 @@ This is a web application built with Angular 2 and TypeScript. The application s
 
 ![screenshot of project](https://github.com/avocadobravado/javascript-week2/blob/master/resources/img/scs03.png?raw=true)
 
-
-## View website
-A live version of the site be may be accessed at this [link](http://rawgit.com/avocadobravado/javascript-week1/master/dist/index.html)
-
 ### Installation
 
 ## Prerequisites
