@@ -1,10 +1,15 @@
-// Colors
+/////////////////////
+////// Colors ///////
+/////////////////////
 $light: #f5e4c6;
 $dark: #444;
 $white: #fafafa;
 $orange: #f58538;
 
-// Global styles
+/////////////////////
+/// Global styles //
+////////////////////
+
 body {
   background-color: lighten(green, 70%);
   color: $dark;
@@ -86,7 +91,10 @@ input {
   padding: 0 50px;
 }
 
-// Login area
+/////////////////////
+///// Login area ////
+/////////////////////
+
 .login {
   margin: 10px 0 0 10px;
   text-align: center;
@@ -111,7 +119,9 @@ input {
   }
 }
 
-// NAVBAR LAYOUT
+//////////////////////
+// NAVBAR LAYOUT ////
+////////////////////
 
 .navbar {
   padding-top: 10px;
@@ -136,7 +146,9 @@ input {
   }
 }
 
-// Monkey animation
+/////////////////////
+// Monkey animation /
+/////////////////////
 .monkey-wrapper {
   position: relative;
   z-index: 1;
@@ -178,7 +190,10 @@ input {
   }
 }
 
-// Hero section/top of container area
+/////////////////////////////////////////
+// Hero section/top of container area //
+///////////////////////////////////////
+
 .logo {
   display: block;
   margin: 50px auto;
@@ -203,11 +218,9 @@ input {
   transform: translateX(-50%);
 }
 
-// NEW ANIMAL AND EDIT Animal
-.admin {
-
-}
-//NEW ANIMAL
+/////////////////
+// NEW ANIMAL //
+///////////////
 
 new-animal {
   clear: both;
@@ -224,7 +237,10 @@ new-animal {
   }
 }
 
-//Edit Animal
+//////////////////
+// Edit Animal //
+////////////////
+
 .employeePermission-wrapper {
   display: flex;
   justify-content: space-around;
@@ -244,7 +260,10 @@ edit-animal {
   margin-right: 40px;
 }
 
-// Animal list
+//////////////////
+// Animal list //
+////////////////
+
 .card {
   background-color: lighten(#F37714, 25%);
   border: 5px solid lighten(green, 70%);
@@ -267,6 +286,8 @@ edit-animal {
   }
 }
 
-// Footer layout
+///////////////////
+// Footer layout //
 footer-layout {
 }
+//////////////////
