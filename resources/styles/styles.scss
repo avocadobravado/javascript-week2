@@ -114,7 +114,7 @@ input {
 
 .navbar {
   padding-top: 10px;
-  background-color: $white;
+  background-color: lighten(green, 73%);
   height: 125px;
   display: flex;
   flex-direction: row-reverse;
