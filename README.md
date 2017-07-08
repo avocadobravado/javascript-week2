@@ -97,7 +97,7 @@ localhost:3000
 
 ## Acknowledgements
 
-* [freepik](http://freepik.com) - for the vector images
+* [freepik](http://freepik.com) - for the vector files
 
 ## License
 
