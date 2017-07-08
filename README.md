@@ -73,10 +73,6 @@ localhost:3000
 * Font Awesome
 * Google Fonts
 
-## Known Bugs
-
-* Not known at this time, but suggestions are welcome
-
 ## Wish List Features
 
 * Ability to display, add, and edit animal photos
