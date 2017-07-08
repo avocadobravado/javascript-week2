@@ -95,10 +95,8 @@ import { AnimalComponent } from './animal-inventory.component'
    togglePopular(clickedAnimal: Animal) {
      if(clickedAnimal.popular === false) {
        clickedAnimal.popular = true;
-       console.log('true popular');
      } else {
        clickedAnimal.popular = false;
-       console.log('false popular');
      }
    }
   }
