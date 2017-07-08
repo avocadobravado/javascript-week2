@@ -18,7 +18,7 @@ This is a web application built with Angular 2 and TypeScript. The application s
 
 ### Installation
 
-## Prerequisites
+#### Prerequisites
 
 * Web browser with ES6 compatibility
 * Ruby (for SCSS/Sass)
