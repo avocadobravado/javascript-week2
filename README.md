@@ -6,7 +6,7 @@
 
 ### Description
 
-This is a web application built with Angular 2 and Typescript. The application showcases a select number of animals who live at the Rose City Zoo. The app allows admins to edit animal information (name, age, likes, dislikes, etc.) as well as add new animals to the site. Users are able to filter a list of the most popular animals at the zoo.
+This is a web application built with Angular 2 and TypeScript. The application showcases a select number of animals who live at the Rose City Zoo. The app allows admins to edit animal information (name, age, likes, dislikes, etc.) as well as add new animals to the site. Users are able to filter a list of the most popular animals at the zoo.
 
 ### Screenshots of Web Application
 
@@ -65,7 +65,7 @@ localhost:3000
 * CSS
 * Sass
 * JavaScript
-* Typescript
+* TypeScript
 * Angular 2
 * Node
 * Bower
