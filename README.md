@@ -70,7 +70,6 @@ localhost:3000
 * Node
 * Bower
 * gulp
-* Font Awesome
 * Google Fonts
 
 ## Wish List Features
