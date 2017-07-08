@@ -81,7 +81,7 @@ localhost:3000
 
 ### Design
 * Google Fonts
-* Adobe Illustrator
+* Adobe Illustrator (for customizing vector images)
 
 ## Wish List Features
 
