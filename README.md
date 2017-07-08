@@ -79,6 +79,7 @@ localhost:3000
 * Filter by other criteria such as age and diet
 * More playful animations to the user-facing section of the site to appeal to a young audience
 * A password-protected admin area
+* Each animal species includes a link where users can learn more information about that particular animal
 
 ## Support and contact details
 
