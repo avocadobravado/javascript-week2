@@ -273,6 +273,9 @@ edit-animal {
   overflow-y: scroll;
   border-radius: 12px;
   margin-bottom: 10px;
+  &:hover {
+    animation: seesaw 4s 3 alternate ease-in-out;
+  }
   h4 {
     text-align: center;
     color: $white;
@@ -285,6 +288,28 @@ edit-animal {
     font-size: 1.5em;
   }
 }
+
+@keyframes seesaw {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  20% {
+    transform: rotate(-0.5deg);
+  }
+  40% {
+    transform: rotate(0.5deg);
+  }
+  60% {
+    transform: rotate(-0.5deg);
+  }
+  80% {
+  transform: rotate(0.5deg);
+  }
+  100% {
+    transform: rotate(-0.5deg);
+  }
+}
+
 
 ///////////////////
 // Footer layout //
