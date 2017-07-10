@@ -27,7 +27,28 @@ import { Animal } from './animal.model';
         <input #newDislikes>
       <label>Animal Fun Fact:</label>
         <input #newFunFact>
-    <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value, newFunFact.value);">Add Animal 🦁</button>
+    <button (click)="submitForm(
+      newSpecies.value,
+      newSpecies.value='',
+      newName.value,
+      newName.value='',
+      newAge.value,
+      newAge.value='',
+      newDiet.value,
+      newDiet.value='',
+      newLocation.value,
+      newLocation.value='',
+      newCaretakers.value,
+      newCaretakers.value='',
+      newSex.value,
+      newSex.value='',
+      newLikes.value,
+      newLikes.value='',
+      newDislikes.value,
+      newDislikes.value='',
+      newFunFact.value,
+      newFunFact.value=''
+      );">Add Animal 🦁</button>
     </div>
   </div>
   `
